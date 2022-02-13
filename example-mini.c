@@ -29,6 +29,5 @@ MC_test (test_a)
 MC_test (test_b)
 {
   MC_assert (0);
-  MC_assert (1);
   MC_assert (1 == 3);
 }

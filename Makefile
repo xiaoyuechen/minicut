@@ -16,5 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with minicut.  If not, see <http://www.gnu.org/licenses/>.
 
-mini-test: example-mini
-	./example-mini
+example-mini: minicut-mini.h minicut-main.h
+
+.PHONY: clean
+clean:
+	rm -f example-mini

@@ -23,10 +23,37 @@
    - Minimal code base
    - Minimal dependencies
    - Written in C, supports C++
-   - Supported GCC and Clang
+   - Supports GCC and Clang
    - Modular and customisable
-** Try it out
-   #+BEGIN_SRC shell
-     git clone https://github.com/xiaoyuechen/minicut.git
-     make
-   #+END_SRC
+** Getting started
+   Clone the repository, then take a look at ~example-mini.c~
+   #+include: "example-mini.c" src c :lines "21-"
+
+   You only need to know 3 things to get started
+   - ~#include "minicut-main.h"~ registers tests and provides a
+     ~main~
+   - ~MC_test(NAME)~ declares a test case with NAME
+   - ~MC_assert(EXP)~ asserts an EXPression
+
+   Build ~example-mini~ by running ~make~. Executing ~./example-mini~
+   gives the following output
+   #+begin_src shell :results output :exports results
+     ./example-mini 2>&1 | cat
+   #+end_src
+
+   #+RESULTS:
+   : minicut is testing ./example-mini
+   : test_a PASS
+   : test_b FAIL
+   : example-mini.c:31: error: assertion failed: 0
+   : example-mini.c:32: error: assertion failed: 1 == 3
+   : TOTAL 2 PASS 1 FAIL 1
+
+   Now you have understood the basic usage of minicut. The rest of the
+   sections are for those who would like to customise or hack minicut.
+
+** TODO How minicut works
+
+** TODO Hacking minicut
+
+** TODO Contributing
