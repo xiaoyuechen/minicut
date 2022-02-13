@@ -18,13 +18,13 @@
 
 * minicut --- MINImalist C Unit Test
 ** Features
-   - Header only :: Simply ~#include "minicut-main.h"~
-   - Test discovery :: Fully automatic
-   - Minimal code base :: ~ 100 lines of simple code
-   - Minimal dependencies :: Only needs ~stddlib.h~ and ~stdio.h~
-   - Written in C :: Also supports C++
-   - Supported compilers :: GCC and Clang
-   - Modular and customisable :: User-defined ~main~ and ~test_hook~
+   - Header-only
+   - Test discovery
+   - Minimal code base
+   - Minimal dependencies
+   - Written in C, supports C++
+   - Supported GCC and Clang
+   - Modular and customisable
 ** Try it out
    #+BEGIN_SRC shell
      git clone https://github.com/xiaoyuechen/minicut.git
