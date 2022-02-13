@@ -16,7 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with minicut.  If not, see <http://www.gnu.org/licenses/>.
 
-* minicut --- MINImalist C Unit Test
+* minicut
+  MINImalist C Unit Test
 ** Features
    - Header-only
    - Test discovery
@@ -27,11 +28,24 @@
    - Modular and customisable
 ** Getting started
    Clone the repository, then take a look at ~example-mini.c~
-   #+include: "example-mini.c" src c :lines "21-"
+   #+begin_src c
+     #include "minicut-main.h"
+
+     MC_test (test_a)
+     {
+       MC_assert (1);
+       MC_assert (3 == 3);
+     }
+
+     MC_test (test_b)
+     {
+       MC_assert (0);
+       MC_assert (1 == 3);
+     }
+   #+end_src
 
    You only need to know 3 things to get started
-   - ~#include "minicut-main.h"~ registers tests and provides a
-     ~main~
+   - Including ~minicut-main.h~ registers tests and provides a ~main~
    - ~MC_test(NAME)~ declares a test case with NAME
    - ~MC_assert(EXP)~ asserts an EXPression
 
@@ -49,8 +63,12 @@
    : example-mini.c:32: error: assertion failed: 1 == 3
    : TOTAL 2 PASS 1 FAIL 1
 
-   Now you have understood the basic usage of minicut. The rest of the
-   sections are for those who would like to customise or hack minicut.
+   Now you have understood the basic usage of minicut. Simply include
+   ~minicut-main.h~ and you are ready to unit test (~minicut-mini.h~
+   must also be in your include path).
+
+   The rest of the sections are for those who would like to customise
+   or hack minicut.
 
 ** TODO How minicut works
 
