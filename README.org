@@ -1,0 +1,32 @@
+# minicut --- MINImalist C Unit Test
+# Copyright (C) 2022  Xiaoyue Chen
+
+# This file is part of minicut.
+
+# minicut is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# minicut is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with minicut.  If not, see <http://www.gnu.org/licenses/>.
+
+* minicut --- MINImalist C Unit Test
+** Features
+   - Header only :: Simply ~#include "minicut-main.h"~
+   - Test discovery :: Fully automatic
+   - Minimal code base :: ~ 100 lines of simple code
+   - Minimal dependencies :: Only needs ~stddlib.h~ and ~stdio.h~
+   - Written in C :: Also supports C++
+   - Supported compilers :: GCC and Clang
+   - Modular and customisable :: User-defined ~main~ and ~test_hook~
+** Try it out
+   #+BEGIN_SRC shell
+     git clone https://github.com/xiaoyuechen/minicut.git
+     make
+   #+END_SRC
