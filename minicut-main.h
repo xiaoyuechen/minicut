@@ -27,7 +27,12 @@
 static inline void
 MC_print_banner (const char *prog)
 {
-  printf ("minicut is testing %s\n", prog);
+  printf ("==================================================================="
+          "===\n"
+          "minicut is testing %s\n"
+          "-------------------------------------------------------------------"
+          "---\n",
+          prog);
 }
 
 static inline void
@@ -35,7 +40,12 @@ MC_print_test_summary (MC_test_node *head)
 {
   int total, pass, fail;
   MC_result (&total, &pass, &fail);
-  printf ("TOTAL %d PASS %d FAIL %d\n", total, pass, fail);
+  printf ("-------------------------------------------------------------------"
+          "---\n"
+          "TOTAL %d PASS %d FAIL %d\n"
+          "==================================================================="
+          "===\n",
+          total, pass, fail);
 }
 
 static inline void
